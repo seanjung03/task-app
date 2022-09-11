@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class Overview extends Component {
+
     constructor(props) {
         super(props);
     }
@@ -9,7 +10,7 @@ class Overview extends Component {
         return (
             <ul>
                 {this.props.array.map((task) => {
-                    return <li>{task}</li>
+                    return <li key={task.id}>{task.text}</li>
                 })}
             </ul>
         );
